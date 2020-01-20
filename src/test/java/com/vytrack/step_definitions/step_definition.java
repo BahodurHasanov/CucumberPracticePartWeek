@@ -41,8 +41,6 @@ public class step_definition {
         BrowserUtils.wait(3);
         Assert.assertEquals(string,loginPage.getPageSubTitle());
         System.out.println("Verify page subtitle : Dashboard"+string);
-
-
     }
 
     @Then("user logs in as driver")
@@ -57,16 +55,13 @@ public class step_definition {
 
     @Then("user enters {string} username and {string} password")
     public void user_enters_username_and_password(String string, String string2) {
-        System.out.println("Login with"+string+"username and"+string2+" password");
-
-
-    }
+        System.out.println("Login with"+string+"username and"+string2+" password");}
 
     @Then("user verifies that {string} message is displayed")
     public void user_verifies_that_message_is_displayed(String string) {
-        System.out.println("Verified that warning message is displayed"+string);
+        System.out.println("Verified that warning message is displayed"+string);}
 
 
-    }
+
 
 }
