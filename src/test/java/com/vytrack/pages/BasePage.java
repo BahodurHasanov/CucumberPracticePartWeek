@@ -2,10 +2,7 @@ package com.vytrack.pages;
 
 import com.vytrack.utilities.BrowserUtils;
 import com.vytrack.utilities.Driver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -80,8 +77,9 @@ public class BasePage {
         String moduleLocator = "//*[normalize-space()='" + moduleName + "' and @class='title title-level-1']";
         String subModuleLocator = "//*[normalize-space()='" + subModuleName + "' and @class='title title-level-2']";
 
-        WebDriverWait wait = new WebDriverWait(Driver.get(), 20);
+        WebDriverWait wait = new WebDriverWait(Driver.get(), 10);
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(moduleLocator)));
+        BrowserUtils.wait(5);
 
         WebElement module = Driver.get().findElement(By.xpath(moduleLocator));
         wait.until(ExpectedConditions.visibilityOf(module));
