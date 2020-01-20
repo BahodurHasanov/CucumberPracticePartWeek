@@ -16,3 +16,34 @@ Feature: Smoke Test
     Then user verifies that "All Manage Dashboards" page subtitle is displayed
 
 
+
+  Scenario: Verify Vehicle page
+    And user navigates to "Fleet" then to "Vehicles"
+    Then user verifies that "All Cars" page subtitle is displayed
+
+
+
+  Scenario: Verify Account page
+    And user navigates to "Customers" then to "Accounts"
+    Then user verifies that "All Accounts" page subtitle is displayed
+
+
+  Scenario: Verify Opportunities page
+    And user navigates to "Sales" then to "Opportunities"
+    Then user verifies that "Open Opportunities" page subtitle is displayed
+
+
+  Scenario: Verify Calls page
+    And user navigates to "Activities" then to "Calls"
+    Then user verifies that "All Calls" page subtitle is displayed
+
+
+  Scenario: Verify Campaigns page
+    And user navigates to "Marketing" then to "Campaigns"
+    Then user verifies that " All Campaigns" page subtitle is displayed
+
+
+
+
+
+
